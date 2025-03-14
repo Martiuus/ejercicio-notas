@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class promedioController {
 
-    @GetMapping("/notas")
+    @GetMapping("/promedio")
     public String formularioNotas(){
-        return "notas";
+        return "promedio";
     }
 }
