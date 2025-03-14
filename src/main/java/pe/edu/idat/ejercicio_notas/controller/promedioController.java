@@ -35,7 +35,7 @@ public class promedioController {
         }
         model.addAttribute("resultado", condicion + ", nota: " + resultado);
         model.addAttribute("visualizaralerta", true);
-        model.addAttribute("color", ColorResultado);
+        model.addAttribute("estilodiagnostico", ColorResultado);
         return "promedio";
 
     }
