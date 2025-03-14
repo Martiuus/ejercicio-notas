@@ -12,14 +12,21 @@
     </div>
     <div class="card-body">
         <form th:action = "@{/calcularpromedio}" method="post" th:object = "${promediomodel}">
-            <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-            <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-            <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-            <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+            <input class="form-control form-control-lg" type="number" th:flied = "*{nota1}" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+            <input class="form-control form-control-lg" type="number" th:flied = "*{nota2}" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+            <input class="form-control form-control-lg" type="number" th:flied = "*{nota3}"  placeholder=".form-control-lg" aria-label=".form-control-lg example">
+            <input class="form-control form-control-lg" type="number" th:flied = "*{notaFinal}"  placeholder=".form-control-lg" aria-label=".form-control-lg example">
+            <button type="submit" class="btn btn-outline-primary">CALCULAR</button>
         </form>
 
+        <div th:if="${visualizaralerta}" class="alert" th:classappend = "${estilodiagnostico}" role="alert">
+            <span th:text="${resultado} ?: ''"></span>
+        </div>
+
+
+
     </div>
-    <button type="submit" class="btn btn-outline-primary">CALCULAR</button>
+
 
 </div>
 </body>
